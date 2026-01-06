@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="css/css-grid.css?version=0.1">
 <link rel="stylesheet" href="css/style.css?version=0.1">
+<link rel="stylesheet" href="css/images.css">
     <title>WEBPROG Introduction</title>
 </head>
 <body>
@@ -36,7 +37,13 @@
                 </div>
 
 <div class="card image-card">
-    <img src="https://img.notionusercontent.com/s3/prod-files-secure%2F85136156-3c6d-8169-b35a-00034a56176e%2Fdb733850-de8b-40b0-8051-ae7fa152d1c3%2Fhehe.jpg/size/w=2000?exp=1764434221&sig=kJi4tNoo_pTeMs8PQjwZNEniGmCeDo8mSdHqAqb6ih0&id=27736156-3c6d-808d-b057-ff0fb74c4cd4&table=block&userId=277d872b-594c-816b-a439-000271374781" alt="">
+    <div id="app2">
+
+  <div>
+    <img v-for="x in manyFoods" v-bind:src="x">
+  </div>
+
+</div>
         </div>
 
 <div class="card">
@@ -50,6 +57,7 @@
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="js/vue.js"></script>
+<script src="js/images.js"></script>
 
 </body>
 </html>
