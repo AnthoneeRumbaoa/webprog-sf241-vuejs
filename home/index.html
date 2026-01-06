@@ -6,88 +6,137 @@
     <title>Anthonee Rumbaoa | WEBPROG | SF241</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
-
+    <link rel="stylesheet" href="css/style.css?version=0.1">
 </head>
 <body>
 
-    <div id="app">
-        <div class="container py-4">
-            <header class="page-header mb-4">
-                <h1 class="fw-bold">Personal Profile Web page - {{ fullName.replace('<br>', ' ') }}</h1>
-            </header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">@amrumbaoa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span> 
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <div class="bento-grid">
-                <div class="bento-item about-box">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="p-3">
-                        <p>{{ bio }}</p>
-                        <span class="status-badge">{{ status }}</span>
-                    </div>
-                </div>
-
-                <div class="bento-item education-box">
-                    <h2 class="section-title">Education / Achievements</h2>
-                    <div class="p-3">
-                        <p>{{ skills[2].description }}</p>
-                    </div>
-                </div>
-
-                <div class="bento-item course-box">
-                    <h2 class="section-title">Course</h2>
-                    <div class="p-3">
-                        <ul>
-                            <li>BS Computer Science Specialized in Cybersecurity</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bento-item it-box">
-                    <h2 class="section-title">IT Experience</h2>
-                    <div class="p-3">
-                        <ul>
-                            <li v-for="skill in skills.slice(0,2)">{{ skill.title }}: {{ skill.description }}</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bento-item hobbies-box">
-                    <h2 class="section-title">Hobbies & Interests</h2>
-                    <div class="p-3">
-                        <p>{{ skills[3].description }}</p>
-                    </div>
-                </div>
-
-                <div class="bento-item goals-box">
-                    <h2 class="section-title">Goals In Life / Dream</h2>
-                    <div class="p-3">
-                        <ul>
-                            <li>Be a professional Visual Storyteller</li>
-                            <li>Excel in Cyber Security</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bento-item gallery-box">
-                    <h2 class="section-title">Picture Gallery</h2>
-                    <div class="p-3 text-center">
-                        <div class="d-flex justify-content-center gap-2 overflow-auto py-2">
-                             <img v-for="photo in archive" :src="photo" class="gallery-thumb">
+    <main>
+        <section id="home" class="hero d-flex align-items-center min-vh-100">
+            <div class="container">
+                <div class="row align-items-center flex-column-reverse flex-lg-row">
+                    <div class="col-lg-6 hero-text mt-5 mt-lg-0">
+                        <h1 class="display-1 fw-bold">Anthonee <br> Rumbaoa</h1>
+                        <h3 class="role-text mb-4">I am an <span class="typing-text">Aspiring Visual Artist</span><span class="cursor">|</span></h3>
+                        <p class="lead text-secondary mb-5">
+                            Focusing on graphics design, photography, visual storytelling through various mediums, and filmmaking. 
+                            I express emotions and ideas into captivating images and narratives, bridging raw creativity with cinematic dreams. <br>
+                            <em>(Still trying to get 10 hours of sleep as of 2026.)</em>
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#skills" class="btn btn-white rounded-pill px-4 py-2 me-3">My Portfolio</a>
                         </div>
-                        <p class="mt-2 small text-white-50">Profile Photo of Myself</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="image-container">
+                            <img src="DSC08430-removebg.png" alt="Anthonee Profile" class="img-fluid main-photo">
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <footer class="mt-4">
-                <div class="footer-banner">
-                    Happy New Year, Everyone!
+        <section id="skills" class="py-5">
+            <div class="container">
+                <h2 class="mb-5 fw-bold text-white">What I Do</h2>
+                <div class="row g-4">
+                    
+                    <div class="col-md-6">
+                        <div class="dark-card p-4 h-100">
+                            <i class="fas fa-palette fa-2x mb-3 text-white"></i>
+                            <h4>Graphic Design</h4>
+                            <p class="text-secondary">Crafting visual identities, posters, and digital art that communicate powerful messages through color and form.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="dark-card p-4 h-100">
+                            <i class="fas fa-camera fa-2x mb-3 text-white"></i>
+                            <h4>Photography & Filmmaking</h4>
+                            <p class="text-secondary">Capturing moments and telling stories through the lens. Editing and directing cinematic visuals.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="dark-card p-4 h-100">
+                            <i class="fas fa-graduation-cap fa-2x mb-3 text-white"></i>
+                            <h4>Academic Background</h4>
+                            <p class="text-secondary">Studying Computer Science specializing Cyber Security @ Asia Pacific College. Currently the Marketing Director of Junior Philippine Computer Society - Asia Pacific College chapter.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="dark-card p-4 h-100">
+                            <i class="fas fa-headphones fa-2x mb-3 text-white"></i>
+                            <h4>Interest</h4>
+                            <p class="text-secondary">Fueled by the soulful rhythms of R&B music, passionate about staying active through working out and playing variety of sports, and drawn to peaceful night drives where the cool breeze melts away the day's stress.</p>
+                        </div>
+                    </div>
+
                 </div>
-            </footer>
+            </div>
+        </section>
+
+        <div id="app">
+        <section id="collection" class="py-5">
+            <div class="container">
+                <h2 class="mb-4 fw-bold text-white">The Archive</h2>
+                <p class="text-secondary mb-4">A collection of moments captured through my lens. Swipe to see more.</p>
+                
+                <div class="photo-scroller">
+                    <div v-for="image in archive" :key="image" class="photo-item">
+                        <img :src="image" :alt="'Photography Shot ' + image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         </div>
-    </div>
+
+        <section id="contact" class="py-5 mb-5">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 class="fw-bold text-white mb-3">Let's Create Together</h2>
+                    <p class="text-secondary mb-4 lead">Got a project in mind or just want to say hello? Feel free to reach out.</p>
+                    
+                    <div class="btn btn-white static rounded-pill px-5 py-3 fw-bold mb-4">
+                        <i class="fas fa-envelope me-2"></i> amrumbaoa@student.apc.edu.ph
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-white fw-bold mb-3">Connect with me</p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://github.com/AnthoneeRumbaoa" target="_blank" class="text-secondary fs-3 hover-white">
+                                <i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/anthonee-jhel-rumbaoa-91727733b/" target="_blank" class="text-secondary fs-3 hover-white">
+                                <i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/aj.rumbaoa/" target="_blank" class="text-secondary fs-3 hover-white">
+                                <i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
