@@ -1,0 +1,40 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Garamond", "Georgia", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: black;
+  padding: 10px;
+  gap: 15px;
+}
+
+.container div {
+  background-color: #763916;
+  border: 2px solid white;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
