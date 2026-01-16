@@ -1,5 +1,5 @@
 <template>
-  <div> class="jampong">
+  <div class="jampong">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
