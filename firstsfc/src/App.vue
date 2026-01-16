@@ -1,5 +1,5 @@
 <template>
-  <h1>Powd</h1>
+  <h1>Powds and Drings</h1>
   <food-item/>
   <food-item/>
   <food-item/>
