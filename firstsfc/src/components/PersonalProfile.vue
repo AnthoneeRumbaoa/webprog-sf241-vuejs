@@ -48,5 +48,3 @@
 <script></script>
  
 <style src="./css/css-grid.css"></style>
-<style src="./css/images.css"></style>
-<style src="./css/style.css"></style>
