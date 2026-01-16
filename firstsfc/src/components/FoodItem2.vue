@@ -1,5 +1,5 @@
 <template>
-  <div> class="jampong">
+  <div> class="carbon">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
@@ -9,18 +9,18 @@
 export default {
   data() {
     return {
-      name: 'Ramen, Takoyaki, Fries',
-      message: 'I like ramen, takoyaki, and fries'
+      name: 'Carbonara and a large 2 liters coke',
+      message: 'Only for me hehe'
     }
   }
 };
 </script>
 
-<style>  
-  .jampong {
+<style>
+  .carbon {
     border: dashed black 1px;
     display: inline-block;
     margin: 10px;
     padding: 10px;
-    background-color: orange;
-  }</style>
+    background-color: lightgreen;
+</style>
