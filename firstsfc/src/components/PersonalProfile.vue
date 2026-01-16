@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div>
     <h1 style="text-align: center;">Personal Profile Web Page - Anthonee Rumbaoa</h1>
 
     <div class="container">
@@ -30,13 +30,7 @@
 
       <div class="card image-card">
         <div>
-          <img 
-            v-for="(image, index) in manyFoods" 
-            :key="index" 
-            :src="image" 
-            alt="Food item"
-            style="width: 100px; margin: 5px;" 
-          />
+          <img v-for="(x, index) in manyFoods" :key="index" :src="x" alt="Food Item">
         </div>
       </div>
 
