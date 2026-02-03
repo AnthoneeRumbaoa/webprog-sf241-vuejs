@@ -13,7 +13,7 @@
       display: inline-block;
       margin: 10px;
       padding: 10px;
-      background-color: black;
+      background-color: blue;
     }
   </style>
 

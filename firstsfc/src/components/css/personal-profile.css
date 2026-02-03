@@ -2,8 +2,8 @@
 :root {
   --bg-dark: #000000;
   --card-bg: #111111;
-  --text-main: #000000;
-  --text-muted: #000000;
+  --text-main: #ffffff;
+  --text-muted: #a1a1a1;
 }
 
 body {
